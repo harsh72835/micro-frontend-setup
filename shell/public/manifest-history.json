@@ -16,5 +16,14 @@
       "scope": "account",
       "patchedAt": "2026-05-27T11:13:45.846Z"
     }
+  ],
+  "analytics": [
+    {
+      "name": "analytics",
+      "version": "0.1.0",
+      "url": "http://localhost:3002/remoteEntry.js",
+      "scope": "analytics",
+      "patchedAt": "2026-05-27T11:31:20.704Z"
+    }
   ]
 }

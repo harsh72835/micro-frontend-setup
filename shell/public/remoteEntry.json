@@ -7,8 +7,8 @@
   },
   "analytics": {
     "name": "analytics",
-    "version": "0.1.0",
-    "url": "http://localhost:3002/remoteEntry.js",
+    "version": "312fce8",
+    "url": "https://mfe-analytics-2q4d8lpy0-harshpatel8163-gmailcoms-projects.vercel.app/remoteEntry.js",
     "scope": "analytics"
   },
   "account": {
