@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -48,6 +49,12 @@ module.exports = (env, argv) => {
         ),
       }),
       new HtmlWebpackPlugin({ template: './public/index.html' }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: 'public/remoteEntry.json', to: 'remoteEntry.json' },
+          { from: 'public/manifest-history.json', to: 'manifest-history.json', noErrorOnMissing: true },
+        ],
+      }),
     ],
     devServer: {
       port: 3000,
