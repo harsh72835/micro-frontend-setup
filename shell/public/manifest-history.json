@@ -1,5 +1,13 @@
 {
-  "checkout": [],
+  "checkout": [
+    {
+      "name": "checkout",
+      "version": "0.1.0",
+      "url": "http://localhost:3001/remoteEntry.js",
+      "scope": "checkout",
+      "patchedAt": "2026-05-27T11:31:17.190Z"
+    }
+  ],
   "account": [
     {
       "name": "account",

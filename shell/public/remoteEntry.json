@@ -1,8 +1,8 @@
 {
   "checkout": {
     "name": "checkout",
-    "version": "0.1.0",
-    "url": "http://localhost:3001/remoteEntry.js",
+    "version": "312fce8",
+    "url": "https://mfe-checkout-c2xyoe5do-harshpatel8163-gmailcoms-projects.vercel.app/remoteEntry.js",
     "scope": "checkout"
   },
   "analytics": {
