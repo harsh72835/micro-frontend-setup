@@ -33,11 +33,17 @@ class ErrorBoundary extends React.Component {
 
 function FrameworkAgnosticWrapper({ mod, mfeName }) {
   const containerRef = useRef(null);
+  const [error, setError] = useState(null);
+
+  // Rethrowing in render propagates the error to the parent ErrorBoundary.
+  // Vue errors from event handlers can't reach React's boundary directly —
+  // the onError callback sets state, which triggers a re-render and throws here.
+  if (error) throw error;
 
   useEffect(() => {
     if (!containerRef.current) return;
     const el = containerRef.current;
-    const instance = mod.mount(el);
+    const instance = mod.mount(el, { onError: setError });
     // Vue returns an app instance; React 17 returns nothing (unmount via el).
     return () => mod.unmount(instance ?? el);
   }, [mod]);

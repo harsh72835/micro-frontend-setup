@@ -53,6 +53,7 @@ module.exports = (env, argv) => {
         patterns: [
           { from: 'public/remoteEntry.json', to: 'remoteEntry.json' },
           { from: 'public/manifest-history.json', to: 'manifest-history.json', noErrorOnMissing: true },
+          { from: 'public/vercel.json', to: 'vercel.json' },
         ],
       }),
     ],
