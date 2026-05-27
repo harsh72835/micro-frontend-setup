@@ -1,0 +1,20 @@
+{
+  "checkout": {
+    "name": "checkout",
+    "version": "0.1.0",
+    "url": "http://localhost:3001/remoteEntry.js",
+    "scope": "checkout"
+  },
+  "analytics": {
+    "name": "analytics",
+    "version": "0.1.0",
+    "url": "http://localhost:3002/remoteEntry.js",
+    "scope": "analytics"
+  },
+  "account": {
+    "name": "account",
+    "version": "0.1.0",
+    "url": "http://localhost:3003/remoteEntry.js",
+    "scope": "account"
+  }
+}

@@ -1,0 +1,64 @@
+/* CSS Modules — classnames are hashed at build time.
+   "checkout-" prefix is redundant here but proves the isolation concept. */
+.container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #1a1a2e;
+}
+
+.meta {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.total {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: right;
+  background: #f9fafb;
+}
+
+.primary {
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.danger {
+  background: #fff;
+  color: #c00;
+  border: 1px solid #c00;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}

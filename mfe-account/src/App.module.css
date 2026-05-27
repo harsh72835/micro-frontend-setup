@@ -1,0 +1,76 @@
+/* .container also exists in mfe-checkout/src/App.module.css.
+   CSS Modules hashes both to different identifiers at build time.
+   Open DevTools to verify: checkout gets .container_XXXX, account gets .container_YYYY */
+.container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #1a1a2e;
+}
+
+.meta {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.name {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.email {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.note {
+  background: #fff8e1;
+  border-left: 3px solid #f59e0b;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.danger {
+  background: #fff;
+  color: #c00;
+  border: 1px solid #c00;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,39 @@
+name: shell
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shell/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: shell/package-lock.json
+
+      - name: Install
+        run: npm ci
+        working-directory: shell
+
+      - name: Build
+        run: npm run build
+        working-directory: shell
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      # Shell bundles manifest at build time for initial load,
+      # fetches fresh on every navigation — no rebuild needed for MFE updates.
+      - name: Deploy to Vercel
+        run: |
+          VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID }} \
+          VERCEL_PROJECT_ID=${{ secrets.SHELL_VERCEL_PROJECT_ID }} \
+          vercel deploy shell/dist --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
