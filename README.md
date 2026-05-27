@@ -150,3 +150,4 @@ These are the honest gaps between this portfolio build and a production platform
 | Error isolation | React Error Boundary per mount point | Crash in one MFE doesn't touch shell or others |
 | CI | GitHub Actions with path filters | One pipeline per MFE, independent trigger |
 | Deploy | Netlify (one site per MFE) | Separate origins prove true cross-origin loading |
+# triggered
