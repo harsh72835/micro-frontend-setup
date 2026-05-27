@@ -11,6 +11,13 @@
   "account": [
     {
       "name": "account",
+      "version": "f7240cf",
+      "url": "https://mfe-account-cgakeyd56-harshpatel8163-gmailcoms-projects.vercel.app/remoteEntry.js",
+      "scope": "account",
+      "patchedAt": "2026-05-27T11:31:27.666Z"
+    },
+    {
+      "name": "account",
       "version": "0.1.0",
       "url": "http://localhost:3003/remoteEntry.js",
       "scope": "account",
