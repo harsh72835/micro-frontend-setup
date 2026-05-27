@@ -44,10 +44,13 @@ jobs:
             VERCEL_PROJECT_ID=${{ secrets.CHECKOUT_VERCEL_PROJECT_ID }} \
             vercel deploy . --prod --token=${{ secrets.VERCEL_TOKEN }} --yes)
           echo "deploy_url=$DEPLOY_URL" >> $GITHUB_OUTPUT
+          # Strip deployment hash (format: project-HASH-team.vercel.app → project-team.vercel.app)
+          STABLE_URL=$(echo "$DEPLOY_URL" | sed -E 's|^(https://[^-]+-[^-]+-)[a-z0-9]{6,14}-|\1|')
+          echo "prod_url=${STABLE_URL:-$DEPLOY_URL}" >> $GITHUB_OUTPUT
 
       - name: Patch manifest
         run: |
-          node scripts/patch-manifest.js checkout "${{ steps.deploy.outputs.deploy_url }}/remoteEntry.js" "${{ github.sha }}"
+          node scripts/patch-manifest.js checkout "${{ steps.deploy.outputs.prod_url }}/remoteEntry.js" "${{ github.sha }}"
 
       - name: Commit manifest update
         run: |
